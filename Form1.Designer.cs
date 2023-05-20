@@ -33,6 +33,7 @@
             this.INFO = new System.Windows.Forms.RichTextBox();
             this.Age = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.Submit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Student_Name
@@ -76,11 +77,21 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "StudentUp";
             // 
+            // Submit
+            // 
+            this.Submit.Location = new System.Drawing.Point(305, 365);
+            this.Submit.Name = "Submit";
+            this.Submit.Size = new System.Drawing.Size(216, 23);
+            this.Submit.TabIndex = 5;
+            this.Submit.Text = "submit";
+            this.Submit.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Submit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Age);
             this.Controls.Add(this.INFO);
@@ -88,6 +99,7 @@
             this.Controls.Add(this.Student_Name);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,6 +112,7 @@
         private System.Windows.Forms.RichTextBox INFO;
         private System.Windows.Forms.RichTextBox Age;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button Submit;
     }
 }
 
