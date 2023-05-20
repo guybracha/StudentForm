@@ -57,7 +57,17 @@ namespace StudentForm.CLASS
 
         public override bool Equals(object obj)
         {
-            return base.Equals(obj);
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            Person otherPerson = (Person)obj;
+
+            return id == otherPerson.id;
+        }
+
+        public override int GetHashCode()
+        {
+            return id.GetHashCode();
         }
     }
 }
