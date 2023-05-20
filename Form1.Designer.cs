@@ -28,65 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.Student_Name = new System.Windows.Forms.RichTextBox();
+            this.IMG = new System.Windows.Forms.RichTextBox();
+            this.INFO = new System.Windows.Forms.RichTextBox();
+            this.Age = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // Student_Name
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(68, 43);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(164, 76);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.Student_Name.Location = new System.Drawing.Point(67, 76);
+            this.Student_Name.Name = "Student_Name";
+            this.Student_Name.Size = new System.Drawing.Size(164, 76);
+            this.Student_Name.TabIndex = 0;
+            this.Student_Name.Text = "";
             // 
-            // richTextBox2
+            // IMG
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(580, 43);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(147, 76);
-            this.richTextBox2.TabIndex = 1;
-            this.richTextBox2.Text = "";
+            this.IMG.Location = new System.Drawing.Point(579, 76);
+            this.IMG.Name = "IMG";
+            this.IMG.Size = new System.Drawing.Size(147, 76);
+            this.IMG.TabIndex = 1;
+            this.IMG.Text = "";
             // 
-            // richTextBox3
+            // INFO
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(68, 230);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(259, 96);
-            this.richTextBox3.TabIndex = 2;
-            this.richTextBox3.Text = "";
+            this.INFO.Location = new System.Drawing.Point(68, 230);
+            this.INFO.Name = "INFO";
+            this.INFO.Size = new System.Drawing.Size(259, 96);
+            this.INFO.TabIndex = 2;
+            this.INFO.Text = "";
             // 
-            // richTextBox4
+            // Age
             // 
-            this.richTextBox4.Location = new System.Drawing.Point(599, 230);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(100, 96);
-            this.richTextBox4.TabIndex = 3;
-            this.richTextBox4.Text = "";
+            this.Age.Location = new System.Drawing.Point(599, 230);
+            this.Age.Name = "Age";
+            this.Age.Size = new System.Drawing.Size(100, 96);
+            this.Age.TabIndex = 3;
+            this.Age.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(389, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 16);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "StudentUp";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.richTextBox4);
-            this.Controls.Add(this.richTextBox3);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Age);
+            this.Controls.Add(this.INFO);
+            this.Controls.Add(this.IMG);
+            this.Controls.Add(this.Student_Name);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.RichTextBox Student_Name;
+        private System.Windows.Forms.RichTextBox IMG;
+        private System.Windows.Forms.RichTextBox INFO;
+        private System.Windows.Forms.RichTextBox Age;
+        private System.Windows.Forms.Label label1;
     }
 }
 
