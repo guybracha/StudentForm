@@ -33,7 +33,7 @@
             this.INFO = new System.Windows.Forms.RichTextBox();
             this.Age = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Submit = new System.Windows.Forms.Button();
+            this.Check = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Student_Name
@@ -42,7 +42,7 @@
             this.Student_Name.Name = "Student_Name";
             this.Student_Name.Size = new System.Drawing.Size(164, 76);
             this.Student_Name.TabIndex = 0;
-            this.Student_Name.Text = "";
+            this.Student_Name.Text = "NAME";
             // 
             // IMG
             // 
@@ -50,7 +50,7 @@
             this.IMG.Name = "IMG";
             this.IMG.Size = new System.Drawing.Size(147, 76);
             this.IMG.TabIndex = 1;
-            this.IMG.Text = "";
+            this.IMG.Text = "IMG";
             // 
             // INFO
             // 
@@ -58,7 +58,7 @@
             this.INFO.Name = "INFO";
             this.INFO.Size = new System.Drawing.Size(259, 96);
             this.INFO.TabIndex = 2;
-            this.INFO.Text = "";
+            this.INFO.Text = "INFO";
             // 
             // Age
             // 
@@ -66,7 +66,7 @@
             this.Age.Name = "Age";
             this.Age.Size = new System.Drawing.Size(100, 96);
             this.Age.TabIndex = 3;
-            this.Age.Text = "";
+            this.Age.Text = "AGE";
             // 
             // label1
             // 
@@ -77,21 +77,21 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "StudentUp";
             // 
-            // Submit
+            // Check
             // 
-            this.Submit.Location = new System.Drawing.Point(305, 365);
-            this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(216, 23);
-            this.Submit.TabIndex = 5;
-            this.Submit.Text = "submit";
-            this.Submit.UseVisualStyleBackColor = true;
+            this.Check.Location = new System.Drawing.Point(305, 365);
+            this.Check.Name = "Check";
+            this.Check.Size = new System.Drawing.Size(216, 63);
+            this.Check.TabIndex = 5;
+            this.Check.Text = "Check";
+            this.Check.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Submit);
+            this.Controls.Add(this.Check);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Age);
             this.Controls.Add(this.INFO);
@@ -112,7 +112,7 @@
         private System.Windows.Forms.RichTextBox INFO;
         private System.Windows.Forms.RichTextBox Age;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button Submit;
+        private System.Windows.Forms.Button Check;
     }
 }
 
