@@ -52,5 +52,33 @@ namespace StudentForm
         {
             
         }
+
+        private void Check_Click(object sender, EventArgs e)
+        {
+            string studentName = Student_Name.Text;
+
+            bool isNameValid = CheckNameValidity(studentName);
+
+            if (isNameValid)
+            {
+                // Name is valid
+                MessageBox.Show("Name is valid.");
+            }
+            else
+            {
+                // Name is invalid
+                MessageBox.Show("Name is invalid.");
+            }
+        }
+
+        private bool CheckNameValidity(string name)
+        {
+            // Add your name validation logic here
+            // For example, check if the name is not empty
+            bool isValid = !string.IsNullOrEmpty(name);
+
+            return isValid;
+        }
+
     }
 }
