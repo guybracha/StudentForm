@@ -41,40 +41,40 @@
             // 
             // Student_Name
             // 
-            this.Student_Name.Location = new System.Drawing.Point(50, 50);
+            this.Student_Name.Location = new System.Drawing.Point(95, 65);
             this.Student_Name.Name = "Student_Name";
-            this.Student_Name.Size = new System.Drawing.Size(200, 25);
+            this.Student_Name.Size = new System.Drawing.Size(231, 53);
             this.Student_Name.TabIndex = 0;
             this.Student_Name.Text = "Student Name";
             // 
             // IMG
             // 
-            this.IMG.Location = new System.Drawing.Point(300, 50);
+            this.IMG.Location = new System.Drawing.Point(345, 65);
             this.IMG.Name = "IMG";
-            this.IMG.Size = new System.Drawing.Size(100, 100);
+            this.IMG.Size = new System.Drawing.Size(131, 128);
             this.IMG.TabIndex = 1;
             this.IMG.Text = "IMG";
             // 
             // INFO
             // 
-            this.INFO.Location = new System.Drawing.Point(50, 100);
+            this.INFO.Location = new System.Drawing.Point(95, 115);
             this.INFO.Name = "INFO";
-            this.INFO.Size = new System.Drawing.Size(200, 50);
+            this.INFO.Size = new System.Drawing.Size(231, 78);
             this.INFO.TabIndex = 2;
             this.INFO.Text = "Student Info";
             // 
             // Age
             // 
-            this.Age.Location = new System.Drawing.Point(300, 150);
+            this.Age.Location = new System.Drawing.Point(345, 165);
             this.Age.Name = "Age";
-            this.Age.Size = new System.Drawing.Size(100, 25);
+            this.Age.Size = new System.Drawing.Size(131, 53);
             this.Age.TabIndex = 3;
             this.Age.Text = "Age";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 200);
+            this.label1.Location = new System.Drawing.Point(124, 228);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 16);
             this.label1.TabIndex = 4;
@@ -82,9 +82,9 @@
             // 
             // Check
             // 
-            this.Check.Location = new System.Drawing.Point(150, 195);
+            this.Check.Location = new System.Drawing.Point(195, 210);
             this.Check.Name = "Check";
-            this.Check.Size = new System.Drawing.Size(75, 25);
+            this.Check.Size = new System.Drawing.Size(106, 53);
             this.Check.TabIndex = 5;
             this.Check.Text = "Check";
             this.Check.UseVisualStyleBackColor = true;
@@ -94,7 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 250);
+            this.ClientSize = new System.Drawing.Size(595, 363);
             this.Controls.Add(this.Check);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Age);
@@ -102,7 +102,7 @@
             this.Controls.Add(this.IMG);
             this.Controls.Add(this.Student_Name);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "StudentUp";
             this.ResumeLayout(false);
             this.PerformLayout();
 
