@@ -13,52 +13,44 @@ namespace StudentForm
 {
     public partial class Form1 : Form
     {
-        private readonly Person person;
-        private readonly Student student;
-
+        private Student student;
         public Form1()
         {
             InitializeComponent();
         }
 
-        private Student GetStudent()
+        private void DisplayPersonInfo(Person person)
         {
-            return student;
+            // Code to display person information
         }
 
-        private void Form1_Load(object sender, EventArgs e, Student student)
+        private void DisplayStudentInfo(Student student)
+        {
+            // Code to display student information
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string studentName = Student_Name.Text;
+            // Rest of your code
+        }
+
+        // Other methods and event handlers
+
+        private void PrintButton_Click(object sender, EventArgs e)
         {
             string name = Student_Name.Text;
             int age = int.Parse(Age.Text);
             int studentNumber = int.Parse(INFO.Text);
-            student = new Student(studentNumber, 1, 2023, 85, name, age, 1, "");  // Provide default values for id and address
+            student.Name = name;
+            student.Age = age;
+            student.Number = studentNumber;
 
-            DisplayPersonInfo();
-            DisplayStudentInfo();
         }
 
-        private void DisplayPersonInfo()
+        private void Form1_Load_1(object sender, EventArgs e)
         {
-            // Assuming you have a RichTextBox control named "INFO"
-            INFO.Text = $"Name: {person.Name}" +
-                        Environment.NewLine +
-                        $"Age: {person.Age}" +
-                        Environment.NewLine +
-                        $"ID: {person.Id}" +
-                        Environment.NewLine +
-                        $"Address: {person.Address}";
-        }
-
-        private void DisplayStudentInfo()
-        {
-            // Assuming you have a RichTextBox control named "Student_Name"
-            Student_Name.Text = $"Student Name: {student.Name}" +
-                                Environment.NewLine +
-                                $"Student Number: {student.Number}" +
-                                Environment.NewLine +
-                                $"Year: {student.Year}" +
-                                Environment.NewLine +
-                                $"Grade Average: {student.GradeAverage}";
+            
         }
     }
 }
