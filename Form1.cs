@@ -143,7 +143,7 @@ namespace StudentForm
             if (result == DialogResult.Yes)
             {
                 names2.Add(Student_Name.Text);
-                Console.WriteLine(names2.ToList());
+                Console.WriteLine(names2);
             } else
             {
                 MessageBox.Show("Adding was canceled");
