@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace StudentForm
 {
@@ -55,25 +56,32 @@ namespace StudentForm
         private void Check_Click(object sender, EventArgs e)
         {
             string studentName = Student_Name.Text;
-            int age = int.Parse(Age.Text);
             bool isNameValid = CheckNameValidity(studentName);
 
             if (isNameValid)
             {
-                // Name is valid
-                MessageBox.Show("Hello " + studentName + " Age: " + age);
+                String[] names = { "guy", "avi", "alon", "moshe" };
+                isNameValid = false;
+                for (int i = 0; i < names.Length; i++)
+                {
+                    if (names[i].Equals(studentName))
+                    {
+                        isNameValid = true; break;
+                    }
+                }
             }
-            else
+            if (isNameValid)
             {
-                // Name is invalid
-                MessageBox.Show("Name is invalid.");
+                MessageBox.Show("Hello " + studentName);
+            } else
+            {
+                MessageBox.Show("Nice Try");
             }
+
         }
 
         private bool CheckNameValidity(string name)
         {
-            // Add your name validation logic here
-            // For example, check if the name is not empty
             bool isValid = !string.IsNullOrEmpty(name);
 
             return isValid;
