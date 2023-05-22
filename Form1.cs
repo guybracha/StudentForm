@@ -58,11 +58,12 @@ namespace StudentForm
         {
             string studentName = Student_Name.Text;
             bool isNameValid = CheckNameValidity(studentName);
+            /*
             int age = int.Parse(Age.Text);
             bool legalAge = Check_age(age);
             int studentNumber = int.Parse(INFO.Text);
             bool goodStudent = Check_ave(studentNumber);
-
+            */
             if (isNameValid)
             {
                 // String[] names = { "guy", "avi", "alon", "moshe" };
@@ -83,7 +84,7 @@ namespace StudentForm
             {
                 MessageBox.Show("Sorry, you're not registered");
             }
-
+            /*
             if (legalAge)
             {
                 MessageBox.Show("You're Adult");
@@ -99,6 +100,7 @@ namespace StudentForm
             {
                 MessageBox.Show("You need to get better");
             }
+             */
         }
 
         private bool CheckNameValidity(string name)
@@ -141,6 +143,7 @@ namespace StudentForm
             if (result == DialogResult.Yes)
             {
                 names2.Add(Student_Name.Text);
+                Console.WriteLine(names2.ToList());
             } else
             {
                 MessageBox.Show("Adding was canceled");
