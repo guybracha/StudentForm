@@ -1,4 +1,6 @@
-﻿namespace StudentForm
+﻿using System;
+
+namespace StudentForm
 {
     partial class Form1
     {
@@ -62,6 +64,7 @@
             this.INFO.Size = new System.Drawing.Size(231, 78);
             this.INFO.TabIndex = 2;
             this.INFO.Text = "Student Info";
+            this.INFO.TextChanged += new System.EventHandler(this.INFO_TextChanged);
             // 
             // Age
             // 
@@ -70,6 +73,7 @@
             this.Age.Size = new System.Drawing.Size(131, 53);
             this.Age.TabIndex = 3;
             this.Age.Text = "Age";
+            this.Age.TextChanged += new System.EventHandler(this.Age_TextChanged);
             // 
             // label1
             // 

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,18 +22,17 @@ namespace StudentForm
 
         private void DisplayPersonInfo(Person person)
         {
-            // Code to display person information
+            MessageBox.Show("Hello");
         }
 
         private void DisplayStudentInfo(Student student)
         {
-            // Code to display student information
+            MessageBox.Show("Hello " + student.Name);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string studentName = Student_Name.Text;
-            // Rest of your code
         }
 
         // Other methods and event handlers
@@ -45,7 +45,6 @@ namespace StudentForm
             student.Name = name;
             student.Age = age;
             student.Number = studentNumber;
-
         }
 
         private void Form1_Load_1(object sender, EventArgs e)
@@ -56,13 +55,13 @@ namespace StudentForm
         private void Check_Click(object sender, EventArgs e)
         {
             string studentName = Student_Name.Text;
-
+            int age = int.Parse(Age.Text);
             bool isNameValid = CheckNameValidity(studentName);
 
             if (isNameValid)
             {
                 // Name is valid
-                MessageBox.Show("Name is valid.");
+                MessageBox.Show("Hello " + studentName + " Age: " + age);
             }
             else
             {
@@ -80,5 +79,27 @@ namespace StudentForm
             return isValid;
         }
 
+        private void INFO_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private bool Check_age(int age)
+        {
+            {
+                if (age > 18) {
+                    return true;
+                } else { return false; }
+            }
+        }
+
+        private bool Check_ave(int studentNumber)
+        {
+            if (studentNumber >= 55) { return true; } else { return false; } }
+
+        private void Age_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
