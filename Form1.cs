@@ -58,6 +58,7 @@ namespace StudentForm
         {
             string studentName = Student_Name.Text;
             bool isNameValid = CheckNameValidity(studentName);
+            List<string> names2 = new List<string>();
             /*
             int age = int.Parse(Age.Text);
             bool legalAge = Check_age(age);
@@ -67,7 +68,6 @@ namespace StudentForm
             if (isNameValid)
             {
                 // String[] names = { "guy", "avi", "alon", "moshe" };
-                List<string> names2 = new List<string>();
                 isNameValid = false;
                 for (int i = 0; i < names2.Count; i++)
                 {
@@ -135,6 +135,11 @@ namespace StudentForm
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            addName();
+        }
+
+        private void addName()
+        {
             String addTitle = "add";
             List<string> names2 = new List<string>();
             MessageBoxButtons butt = MessageBoxButtons.YesNo;
@@ -143,8 +148,9 @@ namespace StudentForm
             if (result == DialogResult.Yes)
             {
                 names2.Add(Student_Name.Text);
-                Console.WriteLine(names2);
-            } else
+                Console.WriteLine(string.Join(", ", names2));
+            }
+            else
             {
                 MessageBox.Show("Adding was canceled");
             }
