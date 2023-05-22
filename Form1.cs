@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -57,6 +58,10 @@ namespace StudentForm
         {
             string studentName = Student_Name.Text;
             bool isNameValid = CheckNameValidity(studentName);
+            int age = int.Parse(Age.Text);
+            bool legalAge = Check_age(age);
+            int studentNumber = int.Parse(INFO.Text);
+            bool goodStudent = Check_ave(studentNumber);
 
             if (isNameValid)
             {
@@ -75,9 +80,24 @@ namespace StudentForm
                 MessageBox.Show("Hello " + studentName);
             } else
             {
-                MessageBox.Show("Nice Try");
+                MessageBox.Show("Sorry, you're not registered");
             }
 
+            if (legalAge)
+            {
+                MessageBox.Show("You're Adult");
+            } else
+            {
+                MessageBox.Show("You're a minor");
+            }
+
+            if (goodStudent)
+            {
+                MessageBox.Show("You're a great student");
+            } else
+            {
+                MessageBox.Show("You need to get better");
+            }
         }
 
         private bool CheckNameValidity(string name)
