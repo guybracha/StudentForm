@@ -65,11 +65,12 @@ namespace StudentForm
 
             if (isNameValid)
             {
-                String[] names = { "guy", "avi", "alon", "moshe" };
+                // String[] names = { "guy", "avi", "alon", "moshe" };
+                List<string> names2 = new List<string>();
                 isNameValid = false;
-                for (int i = 0; i < names.Length; i++)
+                for (int i = 0; i < names2.Count; i++)
                 {
-                    if (names[i].Equals(studentName))
+                    if (names2[i].Equals(studentName))
                     {
                         isNameValid = true; break;
                     }
@@ -128,6 +129,22 @@ namespace StudentForm
         private void Age_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            String addTitle = "add";
+            List<string> names2 = new List<string>();
+            MessageBoxButtons butt = MessageBoxButtons.YesNo;
+            String question = "Do you want to add this name " + Student_Name.Text + " to the array?";
+            DialogResult result = MessageBox.Show(addTitle, question, butt);
+            if (result == DialogResult.Yes)
+            {
+                names2.Add(Student_Name.Text);
+            } else
+            {
+                MessageBox.Show("Adding was canceled");
+            }
         }
     }
 }
