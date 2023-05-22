@@ -137,7 +137,7 @@ namespace StudentForm
             List<string> names2 = new List<string>();
             MessageBoxButtons butt = MessageBoxButtons.YesNo;
             String question = "Do you want to add this name " + Student_Name.Text + " to the array?";
-            DialogResult result = MessageBox.Show(addTitle, question, butt);
+            DialogResult result = MessageBox.Show(question, addTitle, butt);
             if (result == DialogResult.Yes)
             {
                 names2.Add(Student_Name.Text);
