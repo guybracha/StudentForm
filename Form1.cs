@@ -16,6 +16,7 @@ namespace StudentForm
 {
     public partial class Form1 : Form
     {
+        private List<string> names2 = new List<string>();
         private Student student;
         public Form1()
         {
@@ -56,51 +57,33 @@ namespace StudentForm
 
         private void Check_Click(object sender, EventArgs e)
         {
+            CheckNameExist();
+        }
+
+        private void CheckNameExist()
+        {
             string studentName = Student_Name.Text;
             bool isNameValid = CheckNameValidity(studentName);
-            List<string> names2 = new List<string>();
-            /*
-            int age = int.Parse(Age.Text);
-            bool legalAge = Check_age(age);
-            int studentNumber = int.Parse(INFO.Text);
-            bool goodStudent = Check_ave(studentNumber);
-            */
             if (isNameValid)
             {
-                // String[] names = { "guy", "avi", "alon", "moshe" };
                 isNameValid = false;
                 for (int i = 0; i < names2.Count; i++)
                 {
                     if (names2[i].Equals(studentName))
                     {
-                        isNameValid = true; break;
+                        isNameValid = true;
+                        break;
                     }
                 }
             }
             if (isNameValid)
             {
                 MessageBox.Show("Hello " + studentName);
-            } else
+            }
+            else
             {
                 MessageBox.Show("Sorry, you're not registered");
             }
-            /*
-            if (legalAge)
-            {
-                MessageBox.Show("You're Adult");
-            } else
-            {
-                MessageBox.Show("You're a minor");
-            }
-
-            if (goodStudent)
-            {
-                MessageBox.Show("You're a great student");
-            } else
-            {
-                MessageBox.Show("You need to get better");
-            }
-             */
         }
 
         private bool CheckNameValidity(string name)
@@ -137,11 +120,10 @@ namespace StudentForm
         {
             addName();
         }
-
+        
         private void addName()
         {
             String addTitle = "add";
-            List<string> names2 = new List<string>();
             MessageBoxButtons butt = MessageBoxButtons.YesNo;
             String question = "Do you want to add this name " + Student_Name.Text + " to the array?";
             DialogResult result = MessageBox.Show(question, addTitle, butt);
@@ -154,6 +136,11 @@ namespace StudentForm
             {
                 MessageBox.Show("Adding was canceled");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(string.Join(", ", names2));
         }
     }
 }
